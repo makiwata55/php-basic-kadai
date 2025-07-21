@@ -17,7 +17,7 @@
 
             // メソッドを定義する
             public function show_price(int $price) {
-                $this->price = $price;
+                echo $this->price;
             }
             public function __construct(string $name, int $price) {
                 $this->name = $name;
@@ -39,8 +39,8 @@
             private $weight;
 
             // メソッドを定義する
-            public function show_height(int $height) {
-                $this->height = $height;
+            public function show_height() {
+                echo $this->height;
             }
 
             // コンストラクタを定義する
@@ -53,12 +53,13 @@
 
         $animal = new Animal('dog', 60, 5000);
         print_r($animal);
+        echo '<br>';
 
         $food->show_price(250);
+        echo '<br>';
 
-        $animal->show_height(60);
+        $animal->show_height();
 
-        
         ?>
     </p>
 </body>
